@@ -40,8 +40,7 @@ public class SupportSystem
             String input = reader.getInput();
             input = input.trim();//quita los espacios tanto de delante y de detras
             input = input.toLowerCase();//las convierte a minusculas
-
-            if(input.startsWith("bye")) {
+            if(input.startsWith("bye") && input.equals("bye")) {
                 finished = true;
             }
             else {
