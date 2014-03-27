@@ -11,7 +11,7 @@ import java.util.HashMap;
 public class Responder
 {
     ArrayList <String> respuestas;
-     HashMap<String,String> palabrasClave;
+    HashMap<String,String> palabrasClave;
     /**
      * Construct a Responder - nothing to do
      */
@@ -38,7 +38,12 @@ public class Responder
     public String generateResponse()
     {
         Random rmd = new Random();
-       // return "That sounds interesting. Tell me more...";
-       return respuestas.get(rmd.nextInt(respuestas.size()));
+        // return "That sounds interesting. Tell me more...";
+        return respuestas.get(rmd.nextInt(respuestas.size()));
+    }
+    public String verClave()
+    {
+        String key = palabrasClave.keySet();
+        return Key;
     }
 }

@@ -43,6 +43,9 @@ public class SupportSystem
             if(input.startsWith("bye") && input.equals("bye")) {
                 finished = true;
             }
+            else if(input.startsWith(palabrasClave.KeySet())){
+                String respuesta = palabrasClave;
+            }
             else {
                 String response = responder.generateResponse();
                 System.out.println(response);
