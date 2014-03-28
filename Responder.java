@@ -28,7 +28,7 @@ public class Responder
         palabrasClave.put("apaga",respuestas.get(2));
         palabrasClave.put("abrir",respuestas.get(3));
         palabrasClave.put("hola",respuestas.get(1));
-        palabrasClave.put("no",respuestas.get(6));
+        palabrasClave.put("no",respuestas.get(5));
     }
 
     /**
@@ -41,9 +41,12 @@ public class Responder
         // return "That sounds interesting. Tell me more...";
         return respuestas.get(rmd.nextInt(respuestas.size()));
     }
-    public String verClave()
+    public String verClave(String input)
     {
-        String key = palabrasClave.keySet();
-        return Key;
+        //palabrasClave.values();//comprueba si una determinada clave existe en el HashMap
+        //palabrasClave.keySet();//devuelve las claves
+        String palabra = null;
+        palabra = palabrasClave.get(input);//devuelve la frases que responde
+        return palabra;
     }
 }

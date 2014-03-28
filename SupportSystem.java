@@ -15,7 +15,7 @@ public class SupportSystem
 {
     private InputReader reader;
     private Responder responder;
-    
+
     /**
      * Creates a technical support system.
      */
@@ -42,9 +42,8 @@ public class SupportSystem
             input = input.toLowerCase();//las convierte a minusculas
             if(input.startsWith("bye") && input.equals("bye")) {
                 finished = true;
-            }
-            else if(input.startsWith(palabrasClave.KeySet())){
-                String respuesta = palabrasClave;
+            }else if(responder.verClave(input) != null){
+                System.out.println(responder.verClave(input));
             }
             else {
                 String response = responder.generateResponse();
