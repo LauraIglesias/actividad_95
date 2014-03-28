@@ -42,11 +42,9 @@ public class SupportSystem
             input = input.toLowerCase();//las convierte a minusculas
             if(input.startsWith("bye") && input.equals("bye")) {
                 finished = true;
-            }else if(responder.verClave(input) != null){
-                System.out.println(responder.verClave(input));
             }
             else {
-                String response = responder.generateResponse();
+                String response = responder.generateResponse(input);
                 System.out.println(response);
             }
         }

@@ -35,18 +35,17 @@ public class Responder
      * Generate a response.
      * @return   A string that should be displayed as the response
      */
-    public String generateResponse()
+    public String generateResponse(String input)
     {
         Random rmd = new Random();
-        // return "That sounds interesting. Tell me more...";
-        return respuestas.get(rmd.nextInt(respuestas.size()));
-    }
-    public String verClave(String input)
-    {
-        //palabrasClave.values();//comprueba si una determinada clave existe en el HashMap
-        //palabrasClave.keySet();//devuelve las claves
         String palabra = null;
-        palabra = palabrasClave.get(input);//devuelve la frases que responde
+        if(palabrasClave.get(input) == null){
+            // return "That sounds interesting. Tell me more...";
+            palabra = respuestas.get(rmd.nextInt(respuestas.size()));
+        }else{
+            palabra = palabrasClave.get(input);//devuelve la frases que responde
+        }
+
         return palabra;
     }
 }
