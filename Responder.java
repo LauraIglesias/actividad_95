@@ -25,10 +25,10 @@ public class Responder
         respuestas.add("Actualice la aplicacion");
         respuestas.add("Me puede describir mas concretamente su error");
         respuestas.add("Espere un momento que voy a consultarlo");
-        palabrasClave.put("apaga",respuestas.get(2));
-        palabrasClave.put("abrir",respuestas.get(3));
-        palabrasClave.put("hola",respuestas.get(1));
-        palabrasClave.put("no",respuestas.get(5));
+        palabrasClave.put("apaga","Compruebe que se puede encender");
+        palabrasClave.put("abrir","Pruebe a actualizar la aplicacion");
+        palabrasClave.put("hola","Me podria decir que problema tiene");
+        palabrasClave.put("no","Si no funciona, dejeme que lo compruebe");
     }
 
     /**
