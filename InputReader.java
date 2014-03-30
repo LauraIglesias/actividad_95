@@ -25,7 +25,17 @@ public class InputReader
      * Read a line of text from standard input (the text terminal),
      * and return it as a String.
      *
-     * @return  A String typed by the user.
+     * @return  A String typed by the user.La primera palabra de las introducidas por el usuario
+     */
+    /*public String getInput()
+    {
+        System.out.print("> ");         // print prompt
+        String inputLine = reader.nextLine();
+        String[] primeraPalabra = inputLine.split(" ");
+        return primeraPalabra[0];
+    }*/
+    /**
+     * devuelve un conjunto de palabras introducidas por el usuario
      */
     public HashSet<String> getInput()
     {
