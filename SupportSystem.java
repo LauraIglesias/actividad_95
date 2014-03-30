@@ -31,35 +31,35 @@ public class SupportSystem
      * message and enter into a dialog with the user, until the user
      * ends the dialog.
      */
-   /* public void start()
+    /* public void start()
     {
-        boolean finished = false;
+    boolean finished = false;
 
-        printWelcome();
+    printWelcome();
 
-        while(!finished) {
-            String input = reader.getInput();
-            input = input.trim();//quita los espacios tanto de delante y de detras
-            input = input.toLowerCase();//las convierte a minusculas
-            if(input.startsWith("bye") && input.equals("bye")) {
-                finished = true;
-            }
-            else {
-                String response = responder.generateResponse(input);
-                System.out.println(response);
-            }
-        }
-        printGoodbye();
+    while(!finished) {
+    String input = reader.getInput();
+    input = input.trim();//quita los espacios tanto de delante y de detras
+    input = input.toLowerCase();//las convierte a minusculas
+    if(input.startsWith("bye") && input.equals("bye")) {
+    finished = true;
+    }
+    else {
+    String response = responder.generateResponse(input);
+    System.out.println(response);
+    }
+    }
+    printGoodbye();
     }*/
     public void start(){
-         boolean finished = false;
+        boolean finished = false;
 
         printWelcome();
 
         while(!finished) {
             HashSet<String> input = reader.getInput();
 
-            if(input.contains("bye")) {
+            if(input.contains("bye")) {//mmiramos por si contiene la palabra bye
                 finished = true;
             }
             else {
