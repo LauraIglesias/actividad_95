@@ -11,13 +11,14 @@ import java.util.Scanner;
 public class InputReader
 {
     private Scanner reader;
-
+    HashSet <String> frase;
     /**
      * Create a new InputReader that reads text from the text terminal.
      */
     public InputReader()
     {
         reader = new Scanner(System.in);
+        frase = new HashSet<>();
     }
 
     /**
@@ -26,11 +27,14 @@ public class InputReader
      *
      * @return  A String typed by the user.
      */
-    public String getInput()
+    public HashSet<String> getInput()
     {
         System.out.print("> ");         // print prompt
         String inputLine = reader.nextLine();
         String[] unaPalabra = inputLine.split(" ");
-        return unaPalabra[0];
+        for(int i = 0;i<unaPalabra.length;i++){
+            frase.add(unaPalabra[i]);
+        }
+        return frase;
     }
 }
