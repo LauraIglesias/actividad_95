@@ -14,7 +14,6 @@ public class Responder
 {
     ArrayList <String> respuestas;
     HashMap<String,String> palabrasClave;
-    Random rmd;
     /**
      * Construct a Responder - nothing to do
      */
@@ -22,7 +21,6 @@ public class Responder
     {
         respuestas = new ArrayList<>();
         palabrasClave = new HashMap<>();
-        rmd = new Random();
 
         respuestas.add("¿Has reiniciado el sistema?");
         respuestas.add("Te ha surgido algun fallo");
@@ -43,17 +41,19 @@ public class Responder
      */
     public String generateResponse(HashSet<String> frase)
     {
+        Random rmd = new Random();
         String fraseResponder = null;//devuelve la frase a responder
         Iterator <String> iterator = frase.iterator();
         boolean buscando = true;//para que salga del bucle si el String esta lleno 
 
         while(iterator.hasNext() && buscando){
-            fraseResponder = palabrasClave.get(iterator.next());//introduciomos la frase a responder
+            String palabra = iterator.next();
+            fraseResponder = palabrasClave.get(palabra);//introduciomos la frase a responder
             if(fraseResponder != null){
                 buscando = false;
             }
         }
-        if(palabrasClave == null){//si esta vacio elige una respuesta al azar
+        if(fraseResponder == null){//si esta vacio elige una respuesta al azar
             fraseResponder = respuestas.get(rmd.nextInt(respuestas.size()));
         }
 
