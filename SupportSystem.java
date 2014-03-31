@@ -59,7 +59,7 @@ public class SupportSystem
         while(!finished) {
             HashSet<String> input = reader.getInput();
 
-            if(input.contains("bye")) {//mmiramos por si contiene la palabra bye
+            if(input.contains("bye")) {//miramos por si contiene la palabra bye
                 finished = true;
             }
             else {
